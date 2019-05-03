@@ -1,99 +1,99 @@
-"","Geo_Code","Prov_Name","CD_Name","Geo_Type","GNR","Average_income","Median_income","Total_income"
-"1","2401","Quebec","Les Îles-de-la-Madeleine","Territoire équivalent",41,28796,24819,10965
-"2","2402","Quebec","Le Rocher-Percé","Municipalité régionale de comté",28.3,25940,20301,15740
-"3","2403","Quebec","La Côte-de-Gaspé","Municipalité régionale de comté",24.6,31981,27461,15170
-"4","2404","Quebec","La Haute-Gaspésie","Municipalité régionale de comté",21.8,27970,21480,10275
-"5","2405","Quebec","Bonaventure","Municipalité régionale de comté",35.7,29448,23625,15400
-"6","2406","Quebec","Avignon","Municipalité régionale de comté",27.2,28174,23070,12420
-"7","2407","Quebec","La Matapédia","Municipalité régionale de comté",38.1,27481,22253,15370
-"8","2408","Quebec","Matane","Municipalité régionale de comté",23.6,29895,23994,18670
-"9","2409","Quebec","La Mitis","Municipalité régionale de comté",43.5,28183,22714,15450
-"10","2410","Quebec","Rimouski-Neigette","Municipalité régionale de comté",24.3,34194,28082,45450
-"11","2411","Quebec","Les Basques","Municipalité régionale de comté",27.6,27799,22170,7670
-"12","2412","Quebec","Rivière-du-Loup","Municipalité régionale de comté",28.4,32990,27465,27660
-"13","2413","Quebec","Témiscouata","Municipalité régionale de comté",24.8,27572,22787,16890
-"14","2414","Quebec","Kamouraska","Municipalité régionale de comté",32.4,29735,25107,17400
-"15","2415","Quebec","Charlevoix-Est","Municipalité régionale de comté",21.6,31067,25623,13585
-"16","2416","Quebec","Charlevoix","Municipalité régionale de comté",25.1,32144,25716,11235
-"17","2417","Quebec","L'Islet","Municipalité régionale de comté",25.3,29101,25149,15490
-"18","2418","Quebec","Montmagny","Municipalité régionale de comté",22.2,29311,23815,19160
-"19","2419","Quebec","Bellechasse","Municipalité régionale de comté",28,32447,28327,28525
-"20","2420","Quebec","L'Île-d'Orléans","Municipalité régionale de comté",43.8,42759,32855,5640
-"21","2421","Quebec","La Côte-de-Beaupré","Municipalité régionale de comté",29.1,37784,32552,21185
-"22","2422","Quebec","La Jacques-Cartier","Municipalité régionale de comté",33.1,44594,39176,28415
-"23","2423","Quebec","Québec","Territoire équivalent",21.5,38435,31775,463125
-"24","2425","Quebec","Lévis","Territoire équivalent",16.3,40338,34782,112095
-"25","2426","Quebec","La Nouvelle-Beauce","Municipalité régionale de comté",24.5,34156,30149,28190
-"26","2427","Quebec","Robert-Cliche","Municipalité régionale de comté",30.2,30449,25594,15375
-"27","2428","Quebec","Les Etchemins","Municipalité régionale de comté",22.3,28320,24277,14195
-"28","2429","Quebec","Beauce-Sartigan","Municipalité régionale de comté",25.8,31439,25946,41325
-"29","2430","Quebec","Le Granit","Municipalité régionale de comté",25.4,28756,24557,18075
-"30","2431","Quebec","Les Appalaches","Municipalité régionale de comté",26.1,29103,23744,35940
-"31","2432","Quebec","L'Érable","Municipalité régionale de comté",25.4,28745,24783,18925
-"32","2433","Quebec","Lotbinière","Municipalité régionale de comté",26.1,32104,27928,23875
-"33","2434","Quebec","Portneuf","Municipalité régionale de comté",34,33000,28461,40745
-"34","2435","Quebec","Mékinac","Municipalité régionale de comté",32.7,27566,22281,11040
-"35","2436","Quebec","Shawinigan","Territoire équivalent",26,30330,23030,42260
-"36","2437","Quebec","Francheville","Census division",19.5,33044,25714,124605
-"37","2438","Quebec","Bécancour","Municipalité régionale de comté",24.4,34479,25762,16440
-"38","2439","Quebec","Arthabaska","Municipalité régionale de comté",22.4,31938,25633,55930
-"39","2440","Quebec","Les Sources","Municipalité régionale de comté",25.5,27282,22508,11820
-"40","2441","Quebec","Le Haut-Saint-François","Municipalité régionale de comté",21.2,29147,24765,17945
-"41","2442","Quebec","Le Val-Saint-François","Municipalité régionale de comté",21.6,32990,27403,24015
-"42","2443","Quebec","Sherbrooke","Territoire équivalent",16.6,33790,26774,126050
-"43","2444","Quebec","Coaticook","Municipalité régionale de comté",18.3,29034,25141,15130
-"44","2445","Quebec","Memphrémagog","Municipalité régionale de comté",26,35841,26863,40660
-"45","2446","Quebec","Brome-Missisquoi","Municipalité régionale de comté",24.5,35664,27382,45665
-"46","2447","Quebec","La Haute-Yamaska","Municipalité régionale de comté",22.6,33600,27070,68975
-"47","2448","Quebec","Acton","Municipalité régionale de comté",24.3,30058,25366,12405
-"48","2449","Quebec","Drummond","Municipalité régionale de comté",22,30687,25423,79445
-"49","2450","Quebec","Nicolet-Yamaska","Municipalité régionale de comté",25.4,29908,23285,18610
-"50","2451","Quebec","Maskinongé","Municipalité régionale de comté",22.6,28842,24259,30430
-"51","2452","Quebec","D'Autray","Municipalité régionale de comté",32.4,31109,25297,34435
-"52","2453","Quebec","Pierre-De Saurel","Municipalité régionale de comté",21,32375,25542,43470
-"53","2454","Quebec","Les Maskoutains","Municipalité régionale de comté",21.2,33283,28703,68475
-"54","2455","Quebec","Rouville","Municipalité régionale de comté",18.6,34712,30526,28415
-"55","2456","Quebec","Le Haut-Richelieu","Municipalité régionale de comté",24.6,35618,29429,93305
-"56","2457","Quebec","La Vallée-du-Richelieu","Municipalité régionale de comté",19.5,44157,36799,92340
-"57","2458","Quebec","Longueuil","Territoire équivalent",20.8,41178,31094,332135
-"58","2459","Quebec","Lajemmerais","Municipalité régionale de comté",22.2,43774,37208,58620
-"59","2460","Quebec","L'Assomption","Municipalité régionale de comté",21.9,38363,32933,98740
-"60","2461","Quebec","Joliette","Municipalité régionale de comté",24.7,32591,26743,52440
-"61","2462","Quebec","Matawinie","Municipalité régionale de comté",31.4,29545,22905,42105
-"62","2463","Quebec","Montcalm","Municipalité régionale de comté",30.7,29404,25348,39150
-"63","2464","Quebec","Les Moulins","Municipalité régionale de comté",14.6,38427,33144,117825
-"64","2465","Quebec","Laval","Territoire équivalent",17.8,37311,29786,323465
-"65","2466","Quebec","Montréal","Territoire équivalent",20.7,36748,24541,1557040
-"66","2467","Quebec","Roussillon","Municipalité régionale de comté",24.5,40879,34428,130020
-"67","2468","Quebec","Les Jardins-de-Napierville","Municipalité régionale de comté",35,32696,27925,20950
-"68","2469","Quebec","Le Haut-Saint-Laurent","Municipalité régionale de comté",41.5,29186,22556,17855
-"69","2470","Quebec","Beauharnois-Salaberry","Municipalité régionale de comté",33.7,32384,26224,51960
-"70","2471","Quebec","Vaudreuil-Soulanges","Municipalité régionale de comté",19,42618,34721,110100
-"71","2472","Quebec","Deux-Montagnes","Municipalité régionale de comté",12.4,37253,31759,77520
-"72","2473","Quebec","Thérèse-De Blainville","Municipalité régionale de comté",14.8,43026,33209,121410
-"73","2474","Quebec","Mirabel","Territoire équivalent",12.5,37961,33448,32115
-"74","2475","Quebec","La Rivière-du-Nord","Municipalité régionale de comté",18.1,33328,27550,94060
-"75","2476","Quebec","Argenteuil","Municipalité régionale de comté",29.8,30737,23809,26800
-"76","2477","Quebec","Les Pays-d'en-Haut","Municipalité régionale de comté",30.1,40113,29559,35105
-"77","2478","Quebec","Les Laurentides","Municipalité régionale de comté",38.7,32099,24760,38010
-"78","2479","Quebec","Antoine-Labelle","Municipalité régionale de comté",34.9,27953,22423,29555
-"79","2480","Quebec","Papineau","Municipalité régionale de comté",31.3,30909,24208,19190
-"80","2481","Quebec","Gatineau","Territoire équivalent",23,41649,35647,215685
-"81","2482","Quebec","Les Collines-de-l'Outaouais","Municipalité régionale de comté",30.4,45409,39471,37100
-"82","2483","Quebec","La Vallée-de-la-Gatineau","Municipalité régionale de comté",42.3,28854,22654,17420
-"83","2484","Quebec","Pontiac","Municipalité régionale de comté",47.4,28444,23090,11940
-"84","2485","Quebec","Témiscamingue","Municipalité régionale de comté",38.1,33569,25811,13310
-"85","2486","Quebec","Rouyn-Noranda","Territoire équivalent",30.3,39099,30115,33370
-"86","2487","Quebec","Abitibi-Ouest","Municipalité régionale de comté",33.1,33128,25699,17075
-"87","2488","Quebec","Abitibi","Municipalité régionale de comté",33.6,35047,29936,19575
-"88","2489","Quebec","La Vallée-de-l'Or","Municipalité régionale de comté",32.7,37338,29051,34495
-"89","2490","Quebec","La Tuque","Territoire équivalent",25.6,29451,22831,12225
-"90","2491","Quebec","Le Domaine-du-Roy","Municipalité régionale de comté",29.9,31434,25446,25980
-"91","2492","Quebec","Maria-Chapdelaine","Municipalité régionale de comté",16.8,30739,25134,20510
-"92","2493","Quebec","Lac-Saint-Jean-Est","Municipalité régionale de comté",22.8,32992,27312,42950
-"93","2494","Quebec","Le Saguenay-et-son-Fjord","Census division",21,35309,27903,137905
-"94","2495","Quebec","La Haute-Côte-Nord","Municipalité régionale de comté",25.6,29756,24354,9640
-"95","2496","Quebec","Manicouagan","Municipalité régionale de comté",19.8,38201,30414,26430
-"96","2497","Quebec","Sept-Rivières--Caniapiscau","Census division",29.4,42716,32920,31645
-"97","2498","Quebec","Minganie--Le Golfe-du-Saint-Laurent","Census division",49.6,35409,29442,9460
-"98","2499","Quebec","Nord-du-Québec","Census division",22.9,35575,27649,30200
+"Geo_Code","Prov_Name","CD_Name","Geo_Type","GNR","Average_Household_Income","Average_Ind_income","Median_Household_Income","Median_Ind_income","Total_Household_income","Total_Ind_income","Total_pop"
+"2401","Quebec","Les Îles-de-la-Madeleine","Territoire équivalent",41,57053,28796,52267,24819,5385,10965,12550
+"2402","Quebec","Le Rocher-Percé","Municipalité régionale de comté",28.3,48987,25940,38549,20301,7990,15740,17830
+"2403","Quebec","La Côte-de-Gaspé","Municipalité régionale de comté",24.6,60618,31981,50936,27461,7740,15170,17520
+"2404","Quebec","La Haute-Gaspésie","Municipalité régionale de comté",21.8,50600,27970,38749,21480,5410,10275,11710
+"2405","Quebec","Bonaventure","Municipalité régionale de comté",35.7,55364,29448,47827,23625,7840,15400,17545
+"2406","Quebec","Avignon","Municipalité régionale de comté",27.2,50473,28174,41117,23070,6585,12420,14785
+"2407","Quebec","La Matapédia","Municipalité régionale de comté",38.1,50071,27481,42628,22253,8060,15370,18080
+"2408","Quebec","Matane","Municipalité régionale de comté",23.6,52396,29895,42212,23994,10230,18670,21320
+"2409","Quebec","La Mitis","Municipalité régionale de comté",43.5,50454,28183,42351,22714,8320,15450,18200
+"2410","Quebec","Rimouski-Neigette","Municipalité régionale de comté",24.3,60354,34194,50891,28082,24830,45450,53010
+"2411","Quebec","Les Basques","Municipalité régionale de comté",27.6,49306,27799,42510,22170,4155,7670,8730
+"2412","Quebec","Rivière-du-Loup","Municipalité régionale de comté",28.4,59243,32990,49002,27465,14890,27660,32725
+"2413","Quebec","Témiscouata","Municipalité régionale de comté",24.8,50093,27572,41662,22787,8955,16890,19920
+"2414","Quebec","Kamouraska","Municipalité régionale de comté",32.4,55777,29735,47593,25107,8970,17400,20475
+"2415","Quebec","Charlevoix-Est","Municipalité régionale de comté",21.6,57176,31067,50043,25623,7095,13585,15835
+"2416","Quebec","Charlevoix","Municipalité régionale de comté",25.1,61545,32144,52381,25716,5700,11235,12890
+"2417","Quebec","L'Islet","Municipalité régionale de comté",25.3,53508,29101,46718,25149,8105,15490,18045
+"2418","Quebec","Montmagny","Municipalité régionale de comté",22.2,52715,29311,42165,23815,10250,19160,22260
+"2419","Quebec","Bellechasse","Municipalité régionale de comté",28,61543,32447,52095,28327,14545,28525,34235
+"2420","Quebec","L'Île-d'Orléans","Municipalité régionale de comté",43.8,83077,42759,64483,32855,2810,5640,6545
+"2421","Quebec","La Côte-de-Beaupré","Municipalité régionale de comté",29.1,72238,37784,62299,32552,10800,21185,25505
+"2422","Quebec","La Jacques-Cartier","Municipalité régionale de comté",33.1,87022,44594,79769,39176,14080,28415,36585
+"2423","Quebec","Québec","Territoire équivalent",21.5,66629,38435,52888,31775,258870,463125,536695
+"2425","Quebec","Lévis","Territoire équivalent",16.3,75789,40338,65055,34782,57765,112095,135835
+"2426","Quebec","La Nouvelle-Beauce","Municipalité régionale de comté",24.5,66185,34156,56979,30149,14100,28190,34535
+"2427","Quebec","Robert-Cliche","Municipalité régionale de comté",30.2,57229,30449,47985,25594,7885,15375,18780
+"2428","Quebec","Les Etchemins","Municipalité régionale de comté",22.3,52154,28320,44226,24277,7365,14195,16650
+"2429","Quebec","Beauce-Sartigan","Municipalité régionale de comté",25.8,57179,31439,47598,25946,21795,41325,49905
+"2430","Quebec","Le Granit","Municipalité régionale de comté",25.4,52277,28756,43836,24557,9550,18075,21595
+"2431","Quebec","Les Appalaches","Municipalité régionale de comté",26.1,51739,29103,42247,23744,19485,35940,41585
+"2432","Quebec","L'Érable","Municipalité régionale de comté",25.4,52567,28745,42666,24783,9990,18925,22700
+"2433","Quebec","Lotbinière","Municipalité régionale de comté",26.1,61155,32104,52360,27928,12115,23875,28935
+"2434","Quebec","Portneuf","Municipalité régionale de comté",34,61079,33000,52440,28461,21330,40745,48060
+"2435","Quebec","Mékinac","Municipalité régionale de comté",32.7,47570,27566,37736,22281,6100,11040,12635
+"2436","Quebec","Shawinigan","Territoire équivalent",26,50576,30330,39707,23030,24165,42260,48035
+"2437","Quebec","Francheville","Census division",19.5,57159,33044,45591,25714,69200,124605,144510
+"2438","Quebec","Bécancour","Municipalité régionale de comté",24.4,62779,34479,48541,25762,8685,16440,19510
+"2439","Quebec","Arthabaska","Municipalité régionale de comté",22.4,57805,31938,47008,25633,29910,55930,67320
+"2440","Quebec","Les Sources","Municipalité régionale de comté",25.5,47925,27282,40396,22508,6490,11820,14100
+"2441","Quebec","Le Haut-Saint-François","Municipalité régionale de comté",21.2,54073,29147,46268,24765,9205,17945,21665
+"2442","Quebec","Le Val-Saint-François","Municipalité régionale de comté",21.6,60969,32990,51834,27403,12480,24015,29035
+"2443","Quebec","Sherbrooke","Territoire équivalent",16.6,57859,33790,44551,26774,70575,126050,150255
+"2444","Quebec","Coaticook","Municipalité régionale de comté",18.3,54142,29034,45760,25141,7740,15130,18545
+"2445","Quebec","Memphrémagog","Municipalité régionale de comté",26,64513,35841,49541,26863,21845,40660,47615
+"2446","Quebec","Brome-Missisquoi","Municipalité régionale de comté",24.5,65087,35664,50670,27382,24190,45665,54350
+"2447","Quebec","La Haute-Yamaska","Municipalité régionale de comté",22.6,60808,33600,48263,27070,36710,68975,82925
+"2448","Quebec","Acton","Municipalité régionale de comté",24.3,55712,30058,47142,25366,6425,12405,14990
+"2449","Quebec","Drummond","Municipalité régionale de comté",22,54340,30687,44789,25423,42970,79445,95875
+"2450","Quebec","Nicolet-Yamaska","Municipalité régionale de comté",25.4,54572,29908,44916,23285,9765,18610,22035
+"2451","Quebec","Maskinongé","Municipalité régionale de comté",22.6,52215,28842,44122,24259,16130,30430,35400
+"2452","Quebec","D'Autray","Municipalité régionale de comté",32.4,58175,31109,49313,25297,17490,34435,40870
+"2453","Quebec","Pierre-De Saurel","Municipalité régionale de comté",21,57878,32375,46235,25542,23265,43470,49670
+"2454","Quebec","Les Maskoutains","Municipalité régionale de comté",21.2,59659,33283,50253,28703,36590,68475,81860
+"2455","Quebec","Rouville","Municipalité régionale de comté",18.6,65574,34712,57354,30526,14410,28415,34680
+"2456","Quebec","Le Haut-Richelieu","Municipalité régionale de comté",24.6,65952,35618,55167,29429,48190,93305,112225
+"2457","Quebec","La Vallée-du-Richelieu","Municipalité régionale de comté",19.5,86503,44157,74521,36799,45080,92340,114805
+"2458","Quebec","Longueuil","Territoire équivalent",20.8,77119,41178,59319,31094,169280,332135,393285
+"2459","Quebec","Lajemmerais","Municipalité régionale de comté",22.2,87615,43774,77652,37208,27915,58620,73400
+"2460","Quebec","L'Assomption","Municipalité régionale de comté",21.9,74863,38363,64821,32933,47835,98740,118660
+"2461","Quebec","Joliette","Municipalité régionale de comté",24.7,58171,32591,47855,26743,28235,52440,61675
+"2462","Quebec","Matawinie","Municipalité régionale de comté",31.4,53577,29545,43708,22905,22175,42105,48555
+"2463","Quebec","Montcalm","Municipalité régionale de comté",30.7,55878,29404,49559,25348,19560,39150,47730
+"2464","Quebec","Les Moulins","Municipalité régionale de comté",14.6,77593,38427,69446,33144,55175,117825,147485
+"2465","Quebec","Laval","Territoire équivalent",17.8,73999,37311,60952,29786,154460,323465,392725
+"2466","Quebec","Montréal","Territoire équivalent",20.7,63891,36748,44157,24541,849445,1557040,1844500
+"2467","Quebec","Roussillon","Municipalité régionale de comté",24.5,81331,40879,69942,34428,61910,130020,160585
+"2468","Quebec","Les Jardins-de-Napierville","Municipalité régionale de comté",35,64170,32696,56137,27925,10235,20950,25605
+"2469","Quebec","Le Haut-Saint-Laurent","Municipalité régionale de comté",41.5,54571,29186,45307,22556,9010,17855,20885
+"2470","Quebec","Beauharnois-Salaberry","Municipalité régionale de comté",33.7,58414,32384,48621,26224,27645,51960,60350
+"2471","Quebec","Vaudreuil-Soulanges","Municipalité régionale de comté",19,83909,42618,71095,34721,53290,110100,137880
+"2472","Quebec","Deux-Montagnes","Municipalité régionale de comté",12.4,71975,37253,63075,31759,38100,77520,94580
+"2473","Quebec","Thérèse-De Blainville","Municipalité régionale de comté",14.8,85079,43026,68578,33209,58055,121410,151085
+"2474","Quebec","Mirabel","Territoire équivalent",12.5,73464,37961,67023,33448,15760,32115,41600
+"2475","Quebec","La Rivière-du-Nord","Municipalité régionale de comté",18.1,60631,33328,51521,27550,49525,94060,112900
+"2476","Quebec","Argenteuil","Municipalité régionale de comté",29.8,55380,30737,44453,23809,14160,26800,31410
+"2477","Quebec","Les Pays-d'en-Haut","Municipalité régionale de comté",30.1,69640,40113,52232,29559,19530,35105,39750
+"2478","Quebec","Les Laurentides","Municipalité régionale de comté",38.7,56563,32099,46101,24760,20860,38010,44160
+"2479","Quebec","Antoine-Labelle","Municipalité régionale de comté",34.9,48997,27953,40301,22423,15995,29555,34110
+"2480","Quebec","Papineau","Municipalité régionale de comté",31.3,56301,30909,44308,24208,10065,19190,22005
+"2481","Quebec","Gatineau","Territoire équivalent",23,75880,41649,63911,35647,112760,215685,261670
+"2482","Quebec","Les Collines-de-l'Outaouais","Municipalité régionale de comté",30.4,92498,45409,85789,39471,17450,37100,46135
+"2483","Quebec","La Vallée-de-la-Gatineau","Municipalité régionale de comté",42.3,51691,28854,40798,22654,9245,17420,20220
+"2484","Quebec","Pontiac","Municipalité régionale de comté",47.4,52546,28444,45675,23090,6070,11940,14135
+"2485","Quebec","Témiscamingue","Municipalité régionale de comté",38.1,60302,33569,48835,25811,7055,13310,16220
+"2486","Quebec","Rouyn-Noranda","Territoire équivalent",30.3,69765,39099,54132,30115,17985,33370,39985
+"2487","Quebec","Abitibi-Ouest","Municipalité régionale de comté",33.1,59419,33128,48589,25699,9015,17075,20550
+"2488","Quebec","Abitibi","Municipalité régionale de comté",33.6,64743,35047,54465,29936,10150,19575,23765
+"2489","Quebec","La Vallée-de-l'Or","Municipalité régionale de comté",32.7,67100,37338,53665,29051,18370,34495,42055
+"2490","Quebec","La Tuque","Territoire équivalent",25.6,53635,29451,45484,22831,6320,12225,14915
+"2491","Quebec","Le Domaine-du-Roy","Municipalité régionale de comté",29.9,57626,31434,46848,25446,13645,25980,30940
+"2492","Quebec","Maria-Chapdelaine","Municipalité régionale de comté",16.8,55295,30739,46214,25134,10895,20510,24400
+"2493","Quebec","Lac-Saint-Jean-Est","Municipalité régionale de comté",22.8,61182,32992,52048,27312,22135,42950,51140
+"2494","Quebec","Le Saguenay-et-son-Fjord","Census division",21,63905,35309,52676,27903,72600,137905,161635
+"2495","Quebec","La Haute-Côte-Nord","Municipalité régionale de comté",25.6,54900,29756,46960,24354,5015,9640,11170
+"2496","Quebec","Manicouagan","Municipalité régionale de comté",19.8,70580,38201,59298,30414,13695,26430,31295
+"2497","Quebec","Sept-Rivières--Caniapiscau","Census division",29.4,77049,42716,64653,32920,16655,31645,38985
+"2498","Quebec","Minganie--Le Golfe-du-Saint-Laurent","Census division",49.6,72569,35409,62344,29442,4420,9460,11535
+"2499","Quebec","Nord-du-Québec","Census division",22.9,78563,35575,67914,27649,12930,30200,42390
