@@ -7,6 +7,6 @@ gdp_data <- WDI::WDI(country = 'all', indicator = gdps[1], start = NULL,end = NU
 
 gdp_percapita_data <- WDI::WDI(country = 'all', indicator = gdps[2], start = NULL,end = NULL, extra = FALSE, cache = NULL)
 
-write.csv(gdp_data, 'data/global_economic_metrics/gdp__data.csv')
+write.csv(gdp_data, 'data/global_economic_metrics/gdp_data.csv')
 write.csv(gdp_percapita_data, 'data/global_economic_metrics/gdp_percapita_data.csv')
 }
