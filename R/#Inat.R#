@@ -1,0 +1,7 @@
+sessionInfo()
+install.packages("rinat",dependencies=TRUE)
+install.packages("httr")
+
+library(rinat)
+
+
