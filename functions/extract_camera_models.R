@@ -1,11 +1,6 @@
 library(exif)
 library(rinat)
 
-get_inat_obs()
-get_inat_obs_id()
-test <- get_inat_obs_user("ccbelknap")
-get_inat_user_stats(uid = "ccbelknap")
-
 file <- system.file("/home/eliane/Documents/Cours/ecole_ete_bios2/inat_test.jpg", package="exif")
 file_metadata <- read_exif(file)
 
