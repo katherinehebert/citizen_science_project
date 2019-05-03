@@ -7,46 +7,34 @@ library(mapdata)
 library(mapproj)
 library(ggmap)
 
-# bounding box for Canada
-CAN <- c(45,-78,62,-60)
 
-iNat <- get_inat_obs(taxon_name = "Aves",
-             year = 2018,
-             bounds = CAN,
-             geo=TRUE, # exclude non-georeferenced observations
-             maxresults = 50000)
-         
-
-inat_map(iNat, map="world",subregion = ".", plot = TRUE)
-
-map("worldHires","Canada",xlim=c(-141,-53), ylim=c(40,85), col="gray90", fill=TRUE)
-
-
-####Extract datas from Inat
+####Extract datas from Inat per month for 2018
 CAN <- c(45,-78,62,-60)#Set boundaries
-data1 <- get_inat_obs(taxon_name = "Aves",
+
+datalist <- list()
+for (i in 1:12) {
+    data1<- get_inat_obs(taxon_name = "Aves",
              year = 2018,
              bounds = CAN,
+             month = i,
              geo=TRUE, # exclude non-georeferenced observations
              maxresults = 10000)
-inat_datas <- write.csv(data1, file = "inat_datas.csv")
+   datalist[[i]] <- data1
+}
 
+df_final<- do.call(rbind, datalist)
+inat_datas <- write.csv(df_final, file = "inat_datas_all.csv")
+
+## Only for February ##
 data2 <- get_inat_obs(taxon_name = "Aves",
                       year = 2018,
-             bounds = CAN,
-             geo=TRUE, # exclude non-georeferenced observations
-             maxresults = 10)
-
-
-
- 
-inatmap <- function(grpid){
-    CAN <- c(45,-78,62,-60)
-  data1= get_inat_obs(taxon_name = "Aves",
-             year = 2018,
+                      month=2,
              bounds = CAN,
              geo=TRUE, # exclude non-georeferenced observations
              maxresults = 10000)
+str(data2)
+ 
+inatmap <- function(grpid){
   data1=data1[which(!is.na(data1$latitude)),]
   map <-get_map(location =c(min(data1$longitude),
                             min(data1$latitude),
@@ -60,6 +48,6 @@ inatmap <- function(grpid){
   p
 }
 
-map1 <- inatmap("piou")
+inatmap("piou")
+dev.copy2pdf(file="Datas_Inat.pdf")
 dev.off()
-head(data1)
