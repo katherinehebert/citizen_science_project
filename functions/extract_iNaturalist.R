@@ -37,9 +37,21 @@ for (i in 1:12) {
    datalist[[i]] <- data1
 }
 
-df_final2<- do.call(rbind, datalist)
+####Extract datas from Inat per month for 2016
+datalist <- list()
+for (i in 1:12) {
+    data1<- get_inat_obs(taxon_name = "Aves",
+             year = 2016,
+             bounds = CAN,
+             month = i,
+             geo=TRUE, # exclude non-georeferenced observations
+             maxresults = 10000)
+   datalist[[i]] <- data1
+}
 
-df_final <- rbind(df_final1,df_final2)
+df_final3<- do.call(rbind, datalist)
+
+df_final <- rbind(df_final1,df_final2,df_final3)
 str(df_final)
 inat_datas <- write.csv(df_final, file = "inat_datas_all.csv")
 
