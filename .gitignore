@@ -5,3 +5,5 @@
 citizen_science_project.Rproj
 data/.DS_Store
 functions/.DS_Store
+.DS_Store
+*.DS_Store
