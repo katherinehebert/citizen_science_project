@@ -19,7 +19,8 @@ nhs_data <- nhs_data %>%
   rename(CDUID = Geo_Code)
 
 can <- can %>%
-  left_join(nhs_data, by = 'CDUID')
+  left_join(nhs_data, by = 'CDUID') %>%
+  mutate(log_Total_Pop = log(Total_pop))
 ```
 
 ``` r
@@ -29,32 +30,18 @@ avg_h_income_plot <-  ggplot(data = can) +
   ggtitle('Average household income')
 
 print(avg_h_income_plot)
-```
-
-![](economic_metrics_maps_files/figure-markdown_github/plot%20average%20household%20income-1.png)
-
-``` r
 print(Sys.time())
 ```
-
-    ## [1] "2019-05-04 15:43:48 EDT"
 
 ``` r
 avg_i_income_plot <-  ggplot(data = can) +
-  geom_sf(aes(fill = Average_Individual_Income)) +
+  geom_sf(aes(fill = Average_Ind_income)) +
   scale_fill_viridis() +
   ggtitle('Average individual income')
 
-print(avg_h_income_plot)
-```
-
-![](economic_metrics_maps_files/figure-markdown_github/plot%20average%20ind%20income-1.png)
-
-``` r
+print(avg_i_income_plot)
 print(Sys.time())
 ```
-
-    ## [1] "2019-05-04 15:46:12 EDT"
 
 ``` r
 total_pop_plot <-  ggplot(data = can) +
@@ -63,12 +50,22 @@ total_pop_plot <-  ggplot(data = can) +
   ggtitle('Total population')
 
 print(total_pop_plot)
+print(Sys.time())
 ```
 
-![](economic_metrics_maps_files/figure-markdown_github/plot%20total%20population-1.png)
+``` r
+log_total_pop_plot <-  ggplot(data = can) +
+  geom_sf(aes(fill = log_Total_Pop)) +
+  scale_fill_viridis() +
+  ggtitle('Total population (log)')
+
+print(log_total_pop_plot)
+```
+
+![](economic_metrics_maps_files/figure-markdown_github/plot%20log%20total%20population-1.png)
 
 ``` r
 print(Sys.time())
 ```
 
-    ## [1] "2019-05-04 15:48:36 EDT"
+    ## [1] "2019-05-04 16:47:59 EDT"
