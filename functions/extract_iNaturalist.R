@@ -83,10 +83,10 @@ for (i in 1:12){
 }
 d18<- do.call(rbind, datalist)
 ## Obtain a data frame from the list
-df_final1<- rbind(d14,d15,d16,d17,d18)
-str(df_final1)
-df_final1$datetime
-inat_datas <- write.csv(df_final1, file = "inat_datas_all.csv")
+df_final<- rbind(d14,d15,d16,d17,d18)
+str(df_final)
+df_final$datetime
+inat_datas <- write.csv(df_final, file = "inat_datas_all.csv")
 
 ## Generate a map of all observations
 inatmap <- function(grpid){
