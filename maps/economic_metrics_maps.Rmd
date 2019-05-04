@@ -32,11 +32,12 @@ nhs_data <- nhs_data %>%
   rename(CDUID = Geo_Code)
 
 can <- can %>%
-  left_join(nhs_data, by = 'CDUID')
+  left_join(nhs_data, by = 'CDUID') %>%
+  mutate(log_Total_Pop = log(Total_pop))
 
 ```
 
-```{r plot average household income}
+```{r plot average household income, eval = F}
 avg_h_income_plot <-  ggplot(data = can) +
   geom_sf(aes(fill = Average_Household_Income)) +
   scale_fill_viridis() +
@@ -46,7 +47,7 @@ print(avg_h_income_plot)
 print(Sys.time())
 ```
 
-```{r plot average ind income}
+```{r plot average ind income, eval = F}
 avg_i_income_plot <-  ggplot(data = can) +
   geom_sf(aes(fill = Average_Ind_income)) +
   scale_fill_viridis() +
@@ -56,12 +57,23 @@ print(avg_i_income_plot)
 print(Sys.time())
 ```
 
-```{r plot total population}
+```{r plot total population, eval = F}
 total_pop_plot <-  ggplot(data = can) +
   geom_sf(aes(fill = Total_pop)) +
   scale_fill_viridis() +
   ggtitle('Total population')
 
 print(total_pop_plot)
+print(Sys.time())
+```
+
+
+```{r plot log total population}
+log_total_pop_plot <-  ggplot(data = can) +
+  geom_sf(aes(fill = log_Total_Pop)) +
+  scale_fill_viridis() +
+  ggtitle('Total population (log)')
+
+print(log_total_pop_plot)
 print(Sys.time())
 ```
