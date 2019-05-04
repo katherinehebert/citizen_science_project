@@ -37,15 +37,15 @@ print(avg_h_income_plot)
 print(Sys.time())
 ```
 
-    ## [1] "2019-05-04 15:43:48 EDT"
+    ## [1] "2019-05-04 16:02:42 EDT"
 
 ``` r
 avg_i_income_plot <-  ggplot(data = can) +
-  geom_sf(aes(fill = Average_Individual_Income)) +
+  geom_sf(aes(fill = Average_Ind_income)) +
   scale_fill_viridis() +
   ggtitle('Average individual income')
 
-print(avg_h_income_plot)
+print(avg_i_income_plot)
 ```
 
 ![](economic_metrics_maps_files/figure-markdown_github/plot%20average%20ind%20income-1.png)
@@ -54,7 +54,7 @@ print(avg_h_income_plot)
 print(Sys.time())
 ```
 
-    ## [1] "2019-05-04 15:46:12 EDT"
+    ## [1] "2019-05-04 16:05:03 EDT"
 
 ``` r
 total_pop_plot <-  ggplot(data = can) +
@@ -71,4 +71,4 @@ print(total_pop_plot)
 print(Sys.time())
 ```
 
-    ## [1] "2019-05-04 15:48:36 EDT"
+    ## [1] "2019-05-04 16:07:35 EDT"

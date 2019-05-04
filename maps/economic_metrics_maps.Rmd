@@ -48,11 +48,11 @@ print(Sys.time())
 
 ```{r plot average ind income}
 avg_i_income_plot <-  ggplot(data = can) +
-  geom_sf(aes(fill = Average_Individual_Income)) +
+  geom_sf(aes(fill = Average_Ind_income)) +
   scale_fill_viridis() +
   ggtitle('Average individual income')
 
-print(avg_h_income_plot)
+print(avg_i_income_plot)
 print(Sys.time())
 ```
 
