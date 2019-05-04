@@ -9,18 +9,6 @@ library(ggmap)
 ####Extract datas from Inat per month for 2011 to 2018 per month.
 CAN <- c(45,-78,62,-60)#Set boundaries
 
-#datalist <- list()
-#for (i in 1:12){
- #   year=i
-  #  for (j in 1:12) {
-   # data1<- get_inat_obs(taxon_name = "Fungi",
-   #          year = year,
-    #         bounds = CAN,
-     #        month = j,
-      #       geo=TRUE, # exclude non-georeferenced observations
-       #      maxresults = 10000)}
-    #datalist[[i]] <- data1
-#}
 #2014
 datalist <- list()
 for (i in 1:12){
@@ -87,24 +75,3 @@ df_final<- rbind(d14,d15,d16,d17,d18)
 str(df_final)
 df_final$datetime
 inat_datas <- write.csv(df_final, file = "inat_datas_all.csv")
-
-## Generate a map of all observations
-inatmap <- function(grpid){
-  data1=df_final[which(!is.na(df_final$latitude)),]
-  map <-get_map(location =c(min(data1$longitude),
-                            min(data1$latitude),
-                            max(data1$longitude),
-                            max(data1$latitude)),
-                messaging = FALSE)
-  p <-ggplot()
-  p= ggmap(map)+geom_point(data=data1,
-                           aes(x=as.numeric(longitude),
-                               y=as.numeric(latitude)))
-  p
-}
-
-inatmap("beautiful_map")
-
-### Export the pdf.
-dev.copy2pdf(file="Datas_Inat.pdf")
-dev.off()
