@@ -26,4 +26,6 @@ for (i in 1:nrow(regions_qc)){
 
 # Calculate metrics that we want to explain with our models
 
-## 
+## Mean observations by observer = mean observer effort
+
+mean_observer_effort <- obs_region %>% group_by(CDUID, user_login) %>% summarise(nb_obs = n()) %>% group_by(CDUID) %>% summarise(mean_obs_per_observer = mean(nb_obs), n = n())
