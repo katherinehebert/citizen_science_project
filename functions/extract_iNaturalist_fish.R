@@ -4,7 +4,7 @@
 library(rinat)
 
 ####Extract datas from Inat per month for 2011 to 2018 per month.
-CAN <- c(45,-78,62,-60)#Set boundaries
+CAN <- c(45,-78,62,-60) #Set boundaries
 
 #2014
 datalist <- list()
