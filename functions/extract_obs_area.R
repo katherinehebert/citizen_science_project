@@ -29,7 +29,11 @@ for (i in 1:nrow(regions_qc)){
 
 ## 1. Mean observations by observer = mean observer effort
 
-mean_observer_effort <- obs_region %>% group_by(CDUID, user_login) %>% summarise(nb_obs = n()) %>% group_by(CDUID) %>% summarise(mean_obs_per_observer = mean(nb_obs), n = n())
+mean_observer_effort <- obs_region %>% 
+  group_by(CDUID, user_login) %>% 
+  summarise(nb_obs = n()) %>% 
+  group_by(CDUID) %>% 
+  summarise(mean_obs_per_observer = mean(nb_obs), nb_observer = n())
 
 # import census metrics
 qc_econ <- read.csv("data/canada_economic_metrics/censusdivisions_econmetrics.csv")
@@ -48,3 +52,16 @@ obs_totalpop <- obs_cduid %>%
   mutate(obs_totalpop = (n/qc_econ$Total_pop))
 
 
+## 3. Participants %
+
+participants <- mean_observer_effort %>%
+  mutate(observer_totalpop = nb_observer/qc_econ$Total_pop)
+  
+# assemble the metrics into a table
+citsci_metrics <- full_join(obs_totalpop,
+                            participants,
+                            by = "CDUID")
+# remove columns that aren't needed
+citsci_metrics <- subset(citsci_metrics, select = -c(n, nb_observer))
+# write file
+write.csv(citsci_metrics, "data/citsci_metrics.csv", row.names = FALSE)
