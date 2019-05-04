@@ -67,6 +67,5 @@ citsci_metrics <- citsci_metrics %>%
   mutate(taxa = taxaname)
 
 # write file
-write.csv(citsci_metrics, paste0("data/citsci_metrics/citsci_metrics_",taxaname,".csv", row.names = FALSE))
-
+write.csv(citsci_metrics, paste0("data/citsci_metrics/citsci_metrics_",taxaname,".csv"), row.names = FALSE)
 }
