@@ -1,0 +1,99 @@
+##library(glmer) if mixed-models
+library(AICcmodavg)
+library(MASS)
+
+rinat <- read.table("/home/andreanne/Git_SummerSchool/citizen_science_project/data/citsci_metrics/all_taxa_ranking.csv",header = TRUE,sep=",")
+head(rinat)
+
+econo <- read.table("/home/andreanne/Git_SummerSchool/citizen_science_project/data/canada_economic_metrics/censusdivisions_econmetrics.csv",header = TRUE,sep=",")
+head(econo)
+
+df <- merge(rinat,econo,by="Geo_Code") #merge the two df
+head(df)
+str(df)
+hist(df$Rank)
+
+## scale and center all response variables to obtain one value of richness
+hist(log(df$obs_totalpop))
+hist(log(df$observer_totalpop))
+#hist(log(df$mean_obs_per_observer))
+
+df$obs_totalpop <- scale(df$obs_totalpop,center=TRUE,scale=TRUE)
+df$observer_totalpop<- scale(df$observer_totalpop,scale=TRUE)
+df$mean_obs_per_observer<- scale(df$obs_totalpop,scale=TRUE)
+df$contribution <- df$obs_totalpop + df$observer_totalpop + df$mean_obs_per_observer
+
+hist(df$contribution)
+df$contribution
+hist(log(df$contribution))
+
+## scale the explicative variable
+df$Average_Ind_income <- df$Average_Ind_income/1000
+df$Average_Ind_income <- scale(df$Average_Ind_income, center = TRUE)
+
+df$Median_Ind_income <- df$Median_Ind_income/1000
+df$Median_Ind_income <- scale(df$Median_Ind_income, center = TRUE)
+
+## look at datas
+hist(df$obs_totalpop)
+hist(df$observer_totalpop)
+hist(df$mean_obs_per_observer)
+
+plot(df$Average_Ind_income,df$contribution,pch=19)
+
+plot(df$Average_Ind_income,df$mean_obs_per_observer,pch=19)
+plot(df$Median_Ind_income,df$mean_obs_per_observer,pch=19)
+
+plot(df$Average_Ind_income,df$obs_totalpop,pch=19)
+plot(df$Median_Ind_income,df$obs_totalpop,pch=19)
+
+plot(df$Average_Ind_income,df$observer_totalpop,pch=19)
+plot(df$Median_Ind_income,df$observer_totalpop,pch=19)
+## ALL TAXAS ## --- Mean_obs_per_observer
+## GLM ##mean_obs_per_observer
+head(df)
+
+##Ranking
+mod1 <- glm(Rank ~ Average_Ind_income * taxa, data=df, family = gaussian)
+summary(mod1)
+plot(mod1)
+confint(mod1)
+
+
+plot(df$Average_Ind_income,df$Rank)
+
+##obs_totalpop
+mod1 <- glm(contribution ~ Average_Ind_income * taxa, data=df, family = Gamma)
+summary(mod1)
+plot(mod1)
+confint(mod1)
+
+##observer_totalpop~
+mod2 <- glm(observer_totalpop~ Average_Ind_income * taxa, data=df,family=Gamma)
+summary(mod2)
+confint(mod2)
+
+plot(df$Average_Ind_income,df$observer_totalpop)
+##observer_totalpop~
+mod2 <- glm(log(observer_totalpop) ~ Average_Ind_income * taxa, data=df,family=gaussian)
+summary(mod2)
+confint(mod2)
+##observer_totalpop~
+mod2 <- glm(log(obs_totalpop) ~ Average_Ind_income * taxa, data=df,family=gaussian)
+summary(mod2)
+confint(mod2)
+
+##observer_totalpop~
+mod2 <- glm(observer_totalpop~ Average_Ind_income * taxa, data=df,family=Gamma)
+summary(mod2)
+confint(mod2)
+
+
+
+
+
+
+
+
+
+
