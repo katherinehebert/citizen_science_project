@@ -1,0 +1,57 @@
+---
+title: "Maps"
+author: "Renata Diaz"
+date: "5/4/2019"
+output:
+  github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(sf)
+library(dplyr)
+library(viridis)
+library(ggplot2)
+library(here)
+```
+
+```{r handle data}
+
+can <- read_sf(paste0(here(), '/data/can_census_divisions_shp/gcd_000b11a_e.shp'))
+
+qu <- unique(can$PRNAME)[6]
+
+can<- can %>%
+  filter(PRNAME == qu) %>%
+  mutate(CDUID = as.integer(CDUID))
+
+nhs_data <- read.csv(paste0(here(), '/data/canada_economic_metrics/censusdivisions_econmetrics.csv'), stringsAsFactors = F)
+
+nhs_data <- nhs_data %>%
+  select(-Prov_Name, -CD_Name, -Geo_Type, -GNR) %>%
+  rename(CDUID = Geo_Code)
+
+can <- can %>%
+  left_join(nhs_data, by = 'CDUID')
+
+```
+
+```{r plot average household income}
+avg_h_income_plot <-  ggplot(data = can) +
+  geom_sf(aes(fill = Average_Household_Income)) +
+  scale_fill_viridis() +
+  ggtitle('Average household income')
+
+print(avg_h_income_plot)
+print(Sys.time())
+```
+
+```{r plot average ind income}
+avg_i_income_plot <-  ggplot(data = can) +
+  geom_sf(aes(fill = Average_Individual_Income)) +
+  scale_fill_viridis() +
+  ggtitle('Average individual income')
+
+print(avg_h_income_plot)
+print(Sys.time())
+```
