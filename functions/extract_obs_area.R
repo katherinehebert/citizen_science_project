@@ -11,7 +11,7 @@ regions_qc <- subset(regions, PRNAME == "Quebec")
 regions_qc <- st_transform(regions_qc, crs = 4326) %>%  subset(select = c("CDUID", "geometry"))
 
 # Import observations csv and transform to spatial points 
-obs <- read.csv(file = "data/inat/inat_datas.csv")
+obs <- read.csv(file = "data/inat/inat_data_birds.csv")
 obs_sf <- st_as_sf(obs, coords = c("longitude", "latitude"), crs = 4326) %>% subset(select = c("X", "scientific_name", "datetime", "user_login","id", "geometry")) 
 
 # Get observations that fall in each different census region (the output dataframe has each association associated with the right census id)
@@ -64,4 +64,4 @@ citsci_metrics <- full_join(obs_totalpop,
 # remove columns that aren't needed
 citsci_metrics <- subset(citsci_metrics, select = -c(n, nb_observer))
 # write file
-write.csv(citsci_metrics, "data/citsci_metrics.csv", row.names = FALSE)
+write.csv(citsci_metrics, "data/citsci_metrics/citsci_metrics_birds.csv", row.names = FALSE)
