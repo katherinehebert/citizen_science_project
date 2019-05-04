@@ -3,9 +3,10 @@
 # load package
 library(tidyverse)
 
+# Histogram of economic metrics ----
+
 # import census economic metrics
-qc_econ <- read.csv("data/canada_economic_metrics/censusdivisions_econmetrics.csv",
-                     row.names = 1)
+qc_econ <- read.csv("data/canada_economic_metrics/censusdivisions_econmetrics.csv")
 
 # vector of economic metric column names
 metrics <- c("Average_Household_Income", "Median_Household_Income", 
@@ -34,4 +35,3 @@ for(i in 1:length(metrics)){
        xlim = c((min(qc_econ[,metrics[i]]) - adjust), 
                 (max(qc_econ[,metrics[i]]) + adjust)))
 }
-
