@@ -37,7 +37,7 @@ print(avg_h_income_plot)
 print(Sys.time())
 ```
 
-    ## [1] "2019-05-04 11:33:39 EDT"
+    ## [1] "2019-05-04 15:43:48 EDT"
 
 ``` r
 avg_i_income_plot <-  ggplot(data = can) +
@@ -54,4 +54,21 @@ print(avg_h_income_plot)
 print(Sys.time())
 ```
 
-    ## [1] "2019-05-04 11:36:03 EDT"
+    ## [1] "2019-05-04 15:46:12 EDT"
+
+``` r
+total_pop_plot <-  ggplot(data = can) +
+  geom_sf(aes(fill = Total_pop)) +
+  scale_fill_viridis() +
+  ggtitle('Total population')
+
+print(total_pop_plot)
+```
+
+![](economic_metrics_maps_files/figure-markdown_github/plot%20total%20population-1.png)
+
+``` r
+print(Sys.time())
+```
+
+    ## [1] "2019-05-04 15:48:36 EDT"
