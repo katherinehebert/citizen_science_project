@@ -20,6 +20,8 @@ taxanames <- gsub(".csv", "", taxanames)
 # load function to create citizen science metrics
 source('~/Documents/PhD/Courses/DDES2019/citizenscience/citizen_science_project/functions/FUN_extract_obs_area.R', echo=TRUE)
 
+# reset working directory
+setwd("~/Documents/PhD/Courses/DDES2019/citizenscience/citizen_science_project")
 # run for all iNaturalist datasets
 for(i in 1:length(obs)){
   extract_obs_area(obs = obs[[i]],
