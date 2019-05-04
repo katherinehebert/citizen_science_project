@@ -55,3 +55,13 @@ avg_i_income_plot <-  ggplot(data = can) +
 print(avg_h_income_plot)
 print(Sys.time())
 ```
+
+```{r plot total population}
+total_pop_plot <-  ggplot(data = can) +
+  geom_sf(aes(fill = Total_pop)) +
+  scale_fill_viridis() +
+  ggtitle('Total population')
+
+print(total_pop_plot)
+print(Sys.time())
+```
