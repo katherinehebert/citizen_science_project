@@ -30,3 +30,10 @@ for (i in 1:nrow(regions_qc)){
 qc_econ <- read.csv("data/canada_economic_metrics/censusdivisions_econmetrics.csv")
 # change name of census ID column to match obs_region
 colnames(qc_econ)[1] <- "CDUID"
+
+## 2. Observations per capita (#obs/total_pop)
+
+# calculate number of observations per census division
+obs_cduid <- obs_region %>%
+                group_by(CDUID) %>%
+                tally()
