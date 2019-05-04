@@ -26,4 +26,7 @@ for (i in 1:nrow(regions_qc)){
 
 # Calculate metrics that we want to explain with our models
 
-## 
+# import census metrics
+qc_econ <- read.csv("data/canada_economic_metrics/censusdivisions_econmetrics.csv")
+# change name of census ID column to match obs_region
+colnames(qc_econ)[1] <- "CDUID"
