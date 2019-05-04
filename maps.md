@@ -43,10 +43,10 @@ can_short <- can[1:10, ]
 print(Sys.time())
 ```
 
-    ## [1] "2019-05-04 10:52:04 EDT"
+    ## [1] "2019-05-04 11:01:34 EDT"
 
 ``` r
-obspercap_plot <- ggplot(data = can_short) +
+obspercap_plot <- ggplot(data = can) +
   geom_sf(aes(fill = nbobs_per_pop)) +
   scale_fill_viridis() +
   ggtitle('Observations per capita')
@@ -60,10 +60,10 @@ print(obspercap_plot)
 print(Sys.time())
 ```
 
-    ## [1] "2019-05-04 10:52:05 EDT"
+    ## [1] "2019-05-04 11:02:55 EDT"
 
 ``` r
-indpercap_plot <- ggplot(data = can_short) +
+indpercap_plot <- ggplot(data = can) +
   geom_sf(aes(fill = nbind_per_pop)) +
   scale_fill_viridis() +
   ggtitle('Observers per capita')
@@ -77,10 +77,10 @@ print(indpercap_plot)
 print(Sys.time())
 ```
 
-    ## [1] "2019-05-04 10:52:07 EDT"
+    ## [1] "2019-05-04 11:04:11 EDT"
 
 ``` r
-obsperind_plot <-  ggplot(data = can_short) +
+obsperind_plot <-  ggplot(data = can) +
   geom_sf(aes(fill = nbobs_per_ind)) +
   scale_fill_viridis() +
   ggtitle('Observations per observer')
@@ -94,4 +94,4 @@ print(obsperind_plot)
 print(Sys.time())
 ```
 
-    ## [1] "2019-05-04 10:52:08 EDT"
+    ## [1] "2019-05-04 11:05:26 EDT"
