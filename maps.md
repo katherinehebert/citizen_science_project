@@ -1,21 +1,9 @@
----
-title: "Maps"
-author: "Renata Diaz"
-date: "5/4/2019"
-output:
-  github_document
----
+Maps
+================
+Renata Diaz
+5/4/2019
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-library(sf)
-library(dplyr)
-library(viridis)
-library(ggplot2)
-```
-
-```{r handle data}
-
+``` r
 can <- read_sf('data/can_census_divisions_shp/gcd_000b11a_e.shp')
 
 qu <- unique(can$PRNAME)[6]
@@ -46,37 +34,64 @@ can <- can %>%
          nbobs_per_ind = nbobs/nbind)
 ```
 
-```{r make maps}
-
+``` r
 # Make maps of summary stats from toy stats
 # Use viridis for color blind friendly colors.
 
 can_short <- can[1:10, ]
 
 print(Sys.time())
+```
 
+    ## [1] "2019-05-04 10:52:04 EDT"
+
+``` r
 obspercap_plot <- ggplot(data = can_short) +
   geom_sf(aes(fill = nbobs_per_pop)) +
   scale_fill_viridis() +
   ggtitle('Observations per capita')
 
 print(obspercap_plot)
-print(Sys.time())
+```
 
+![](maps_files/figure-markdown_github/make%20maps-1.png)
+
+``` r
+print(Sys.time())
+```
+
+    ## [1] "2019-05-04 10:52:05 EDT"
+
+``` r
 indpercap_plot <- ggplot(data = can_short) +
   geom_sf(aes(fill = nbind_per_pop)) +
   scale_fill_viridis() +
   ggtitle('Observers per capita')
 
 print(indpercap_plot)
-print(Sys.time())
+```
 
+![](maps_files/figure-markdown_github/make%20maps-2.png)
+
+``` r
+print(Sys.time())
+```
+
+    ## [1] "2019-05-04 10:52:07 EDT"
+
+``` r
 obsperind_plot <-  ggplot(data = can_short) +
   geom_sf(aes(fill = nbobs_per_ind)) +
   scale_fill_viridis() +
   ggtitle('Observations per observer')
 
 print(obsperind_plot)
-print(Sys.time())
-
 ```
+
+![](maps_files/figure-markdown_github/make%20maps-3.png)
+
+``` r
+print(Sys.time())
+```
+
+    ## [1] "2019-05-04 10:52:08 EDT"
