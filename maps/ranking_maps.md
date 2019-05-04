@@ -1,22 +1,9 @@
----
-title: "Maps"
-author: "Renata Diaz"
-date: "5/4/2019"
-output:
-  github_document
----
+Maps
+================
+Renata Diaz
+5/4/2019
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-library(sf)
-library(dplyr)
-library(viridis)
-library(ggplot2)
-library(here)
-```
-
-```{r handle data}
-
+``` r
 can <- read_sf(paste0(here(), '/data/can_census_divisions_shp/gcd_000b11a_e.shp'))
 
 qu <- unique(can$PRNAME)[6]
@@ -55,3 +42,29 @@ ranking <- ranking %>%
   
 }
 ```
+
+    ## [1] "2019-05-04 16:53:56 EDT"
+
+![](ranking_maps_files/figure-markdown_github/handle%20data-1.png)
+
+    ## [1] "2019-05-04 16:55:19 EDT"
+    ## [1] "2019-05-04 16:55:19 EDT"
+
+![](ranking_maps_files/figure-markdown_github/handle%20data-2.png)
+
+    ## [1] "2019-05-04 16:56:38 EDT"
+    ## [1] "2019-05-04 16:56:38 EDT"
+
+![](ranking_maps_files/figure-markdown_github/handle%20data-3.png)
+
+    ## [1] "2019-05-04 16:57:59 EDT"
+    ## [1] "2019-05-04 16:57:59 EDT"
+
+![](ranking_maps_files/figure-markdown_github/handle%20data-4.png)
+
+    ## [1] "2019-05-04 16:59:18 EDT"
+    ## [1] "2019-05-04 16:59:18 EDT"
+
+![](ranking_maps_files/figure-markdown_github/handle%20data-5.png)
+
+    ## [1] "2019-05-04 17:00:34 EDT"
