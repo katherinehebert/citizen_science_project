@@ -37,3 +37,9 @@ colnames(qc_econ)[1] <- "CDUID"
 obs_cduid <- obs_region %>%
                 group_by(CDUID) %>%
                 tally()
+
+# calculate # obs per total population
+obs_totalpop <- obs_cduid %>%
+  mutate(obs_totalpop = (n/qc_econ$Total_pop))
+
+
