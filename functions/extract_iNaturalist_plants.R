@@ -71,4 +71,4 @@ d18<- do.call(rbind, datalist)
 df_final<- rbind(d14,d15,d16,d17,d18)
 str(df_final)
 df_final$datetime
-inat_datas <- write.csv(df_final, file = "inat_data_plants.csv")
+inat_data <- write.csv(df_final, file = "data/inat/inat_data_plants.csv")
