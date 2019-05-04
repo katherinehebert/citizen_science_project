@@ -13,7 +13,7 @@ CAN <- c(45,-78,62,-60)#Set boundaries
 #for (i in 1:12){
  #   year=i
   #  for (j in 1:12) {
-   # data1<- get_inat_obs(taxon_name = "Aves",
+   # data1<- get_inat_obs(taxon_name = "Fungi",
    #          year = year,
     #         bounds = CAN,
      #        month = j,
@@ -24,7 +24,7 @@ CAN <- c(45,-78,62,-60)#Set boundaries
 #2014
 datalist <- list()
 for (i in 1:12){
-    data1<- get_inat_obs(taxon_name = "Aves",
+    data1<- get_inat_obs(taxon_name = "Fungi",
              year = 2014,
              bounds = CAN,
              month = i,
@@ -37,7 +37,7 @@ d14<- do.call(rbind, datalist)
 #2015
 datalist <- list()
 for (i in 1:12){
-    data1<- get_inat_obs(taxon_name = "Aves",
+    data1<- get_inat_obs(taxon_name = "Fungi",
              year = 2015,
              bounds = CAN,
              month = i,
@@ -49,7 +49,7 @@ d15<- do.call(rbind, datalist)
 #2016
 datalist <- list()
 for (i in 1:12){
-    data1<- get_inat_obs(taxon_name = "Aves",
+    data1<- get_inat_obs(taxon_name = "Fungi",
              year = 2016,
              bounds = CAN,
              month = i,
@@ -61,7 +61,7 @@ d16<- do.call(rbind, datalist)
 #2017
 datalist <- list()
 for (i in 1:12){
-    data1<- get_inat_obs(taxon_name = "Aves",
+    data1<- get_inat_obs(taxon_name = "Fungi",
              year = 2017,
              bounds = CAN,
              month = i,
@@ -73,7 +73,7 @@ d17<- do.call(rbind, datalist)
 #2018
 datalist <- list()
 for (i in 1:12){
-    data1<- get_inat_obs(taxon_name = "Aves",
+    data1<- get_inat_obs(taxon_name = "Fungi",
              year = 2018,
              bounds = CAN,
              month = i,
