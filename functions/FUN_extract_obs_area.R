@@ -28,6 +28,8 @@ for (i in 1:nrow(regions_qc)){
 
 # Calculate metrics that we want to explain with our models
 
+# Calculate total numer of observers by region 
+tot_obs <- obs_region %>% group_by(CDUID) %>% summarise(tot_nb_obs = n())
 
 ## 1. Mean observations by observer = mean observer effort
 
@@ -61,12 +63,19 @@ participants <- mean_observer_effort %>%
 citsci_metrics <- full_join(obs_totalpop,
                             participants,
                             by = "CDUID")
+
+citsci_metrics <- full_join(citsci_metrics,
+                            tot_obs,
+                            by = "CDUID")
+
 # remove columns that aren't needed
 citsci_metrics <- subset(citsci_metrics, select = -c(n, nb_observer))
+
 
 # add taxa name column
 citsci_metrics <- citsci_metrics %>%
   mutate(taxa = taxaname)
+
 
 # write file
 write.csv(citsci_metrics, paste0("data/citsci_metrics/citsci_metrics_",taxaname,".csv"), row.names = FALSE)
