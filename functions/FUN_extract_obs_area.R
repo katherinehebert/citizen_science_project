@@ -39,7 +39,7 @@ mean_observer_effort <- obs_region %>%
   group_by(CDUID) %>% 
   summarise(mean_obs_per_observer = mean(nb_obs), 
             nb_observer = n(),
-            stderror = sd(nb_obs)/sqrt(length(nb_obs)))
+            stderror = sd(nb_obs)/sqrt(n()))
 
 
 ## 2. Observations per capita (#obs/total_pop)
