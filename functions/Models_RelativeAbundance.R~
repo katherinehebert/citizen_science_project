@@ -1,0 +1,103 @@
+##library(glmer) if mixed-models
+library(MASS)
+library(RColorBrewer)
+
+rinat <- read.table("/home/andreanne/Git_SummerSchool/citizen_science_project/data/citsci_metrics/all_taxa_ranking.csv",header = TRUE,sep=",")
+
+econo <- read.table("/home/andreanne/Git_SummerSchool/citizen_science_project/data/canada_economic_metrics/censusdivisions_econmetrics.csv",header = TRUE,sep=",")
+head(econo)
+
+df <- merge(rinat,econo,by="Geo_Code") #merge the two df
+head(df)
+str(df)
+hist(df$Rank)
+
+## scale the explicative variable
+df$Average_Ind_income <- df$Average_Ind_income/1000
+df$Average_Ind_income <- scale(df$Average_Ind_income, center = TRUE)
+
+## look at datas
+hist(df$obs_totalpop)
+hist(df$observer_totalpop)
+hist(df$mean_obs_per_observer)
+
+## 1 ##
+## OBSERVERS PER CAPITA ##
+plot(df$Average_Ind_income,df$observer_totalpop,pch=19)
+hist(df$observer_totalpop)
+
+df$Obs <- log(df$observer_totalpop)
+hist(df$Obs)
+mod1 <- glm(Obs~ Average_Ind_income * taxa, data=df, family = gaussian)
+summary(mod1)
+
+plot(mod1)
+confint(mod1)
+
+df$fitted<-fitted(mod1)
+
+test <- df$Average_Ind_income* attr(df$Average_Ind_income, 'scaled:scale') + attr(df$Average_Ind_income, 'scaled:center')
+df$unscale <- test*1000
+head(df)
+birds <- df[df$taxa=="birds",]
+fungi <- df[df$taxa=="fungi",]
+mammals <- df[df$taxa=="mammals",]
+plants <- df[df$taxa=="plants",]
+insects <- df[df$taxa=="insects",]
+head(fungi)
+
+plot(fungi$fitted~fungi$unscale,type="l",ylab="Observers per capita (log)",xlab="Average income",col="#d7191c",bty="n",lwd=4,cex.axis=1.4,cex.lab=1.4,xlim=c(25000,45000),ylim=c(-13,-6))
+
+points(fungi$unscale,fungi$Obs,pch=19,col="#d7191c")
+points(birds$unscale,birds$Obs,pch=19,col="#fdae61")
+points(mammals$unscale,mammals$Obs,pch=19,col="#91cf60")
+points(plants$unscale,plants$Obs,pch=19,col="#1a9850")
+points(insects$unscale,insects$Obs,pch=19,col="#4575b4")
+
+lines(birds$fitted~birds$unscale,col="#fdae61",lwd=4)
+lines(mammals$fitted~mammals$unscale, col="#91cf60",lwd=4)
+lines(plants$fitted~plants$unscale, col="#1a9850",lwd=4)
+lines(insects$fitted~insects$unscale, col="#4575b4",lwd=4)
+
+
+dev.copy2pdf(file="all_observerspercapita.pdf")
+dev.off()
+
+######################################
+##############################
+##############################
+##############################
+##Ranking
+hist(df$Rank)
+mod1 <- glm(Rank ~ Average_Ind_income * taxa, data=df, family = gaussian)
+summary(mod1)
+plot(mod1)
+confint(mod1)
+
+test <- df$Average_Ind_income* attr(df$Average_Ind_income, 'scaled:scale') + attr(df$Average_Ind_income, 'scaled:center')
+df$unscale <- test*1000
+head(df)
+birds <- df[df$taxa=="birds",]
+fungi <- df[df$taxa=="fungi",]
+mammals <- df[df$taxa=="mammals",]
+plants <- df[df$taxa=="plants",]
+insects <- df[df$taxa=="insects",]
+head(fungi)
+
+plot(fungi$fitted~fungi$unscale,type="l",ylim=c(50,250),ylab="Contribution to citizen science",xlab="Average income",col="#d7191c",bty="n",lwd=4,cex.axis=1.4,cex.lab=1.4,xlim=c(25000,45000))
+
+points(fungi$unscale,fungi$Rank,pch=19,col="#d7191c")
+points(birds$unscale,birds$Rank,pch=19,col="#fdae61")
+points(mammals$unscale,mammals$Rank,pch=19,col="#91cf60")
+points(plants$unscale,plants$Rank,pch=19,col="#1a9850")
+points(insects$unscale,insects$Rank,pch=19,col="#4575b4")
+
+lines(birds$fitted~birds$unscale,col="#fdae61",lwd=4)
+lines(mammals$fitted~mammals$unscale, col="#91cf60",lwd=4)
+lines(plants$fitted~plants$unscale, col="#1a9850",lwd=4)
+lines(insects$fitted~insects$unscale, col="#4575b4",lwd=4)
+
+
+dev.copy2pdf(file="fungi.pdf")
+dev.off()
+
